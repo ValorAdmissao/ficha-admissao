@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ficha de Admissão – Valor</title>
+<meta name="robots" content="noindex">
+<script>
+  var FICHA = 'https://script.google.com/macros/s/AKfycbxhYQLfY3Si_fi-kAVvArQwH0I6j2dl1tLv-jThSqxe98UbcmkNGEbdPu1p0t-7Jd7tBw/exec';
+  var p = new URLSearchParams(location.search);
+  // aceita ?cliente=65 e também admissao.valorse.com.br/65
+  var cod = p.get('cliente') || location.pathname.replace(/\//g, '').replace(/\D/g, '');
+  location.replace(FICHA + (cod ? '?cliente=' + encodeURIComponent(cod) : ''));
+</script>
+<style>
+  body{margin:0;min-height:100vh;display:grid;place-items:center;font-family:system-ui,sans-serif;background:#f3f5fa;color:#022447}
+  a{color:#0f9e88;font-weight:600}
+</style>
+</head>
+<body>
+  <p>Abrindo a ficha de admissão… <a id="l" href="https://script.google.com/macros/s/AKfycbxhYQLfY3Si_fi-kAVvArQwH0I6j2dl1tLv-jThSqxe98UbcmkNGEbdPu1p0t-7Jd7tBw/exec">clique aqui</a> se não abrir.</p>
+</body>
+</html>
